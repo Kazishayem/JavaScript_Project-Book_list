@@ -34,6 +34,12 @@ function Addbook(e)
 
         NewRow.appendChild(NewAuthor);
 
+      let z = document.querySelector('#year').value;
+     if(!z.match(/^\d+/))
+        {
+        alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)")
+        }
+
         let NewYear = document.createElement('th');
 
         NewYear.innerHTML = year.value;
@@ -42,6 +48,8 @@ function Addbook(e)
         NewRow.appendChild(NewYear);
 
         booklist.appendChild(NewRow);
+
+
 
 
     }
