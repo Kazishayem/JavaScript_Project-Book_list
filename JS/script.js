@@ -10,13 +10,16 @@ function Addbook(e)
 {
     e.preventDefault();
 
-    if(title.value == '' && author.value == '' && year.value == '')
+    if(title.value == '' || author.value == '' || year.value == '')
     {
         alert("Fillup the form");
 
     }
     else
     {
+
+
+
         let NewRow = document.createElement('tr');
         //console.log(NewRow);
 
@@ -39,12 +42,7 @@ function Addbook(e)
         alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)")
         }
 
-      let z = document.querySelector('#year').value;
-     if(!z.match(/^\d+/))
-        {
-        alert("Please only enter numeric characters only for your Age! (Allowed input:0-9)")
-        }
-
+      
         let NewYear = document.createElement('th');
 
         NewYear.innerHTML = year.value;
